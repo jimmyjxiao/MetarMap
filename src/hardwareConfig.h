@@ -21,7 +21,7 @@ constexpr addressableLED LED14 = addressableLED(13);
 constexpr addressableLED LED15 = addressableLED(14);
 constexpr addressableLED LED16 = addressableLED(15);
 constexpr addressableLED LED17 = addressableLED(16);
-constexpr commonAnnodeRGBLED LED18 = commonAnnodeRGBLED(16,4,2);
+constexpr commonCathodeRGBLED LED18 = commonCathodeRGBLED(16,4,2);
 constexpr const RGB_LED* const LEDs[] = {
-	&LED1, &LED2, &LED3, &LED4,&LED5,&LED6, &LED7, &LED8, &LED9, &LED10, &LED11, &LED12, &LED13, &LED14, &LED15, &LED16, &LED17, &LED18
+	&LED1, &LED2, &LED3, &LED4,&LED5,&LED18, &LED6, &LED7, &LED8, &LED9, &LED10, &LED11, &LED12, &LED13, &LED14, &LED15, &LED16, &LED17
 	};

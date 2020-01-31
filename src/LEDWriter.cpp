@@ -9,9 +9,9 @@ void commonCathodeRGBLED::setRGB(bool red, bool green, bool blue) const
 }
 void commonAnnodeRGBLED::setRGB(bool red, bool green, bool blue) const
 {
-	writePin(B_pin, blue);
-	writePin(G_pin, green);
-	writePin(R_pin, red);
+	writePin(B_pin, !blue);
+	writePin(G_pin, !green);
+	writePin(R_pin, !red);
 }
 unsigned char boolToColorComponent(bool input)
 {
@@ -28,6 +28,7 @@ void addressableLED::initializeLEDs(unsigned short numLeds, unsigned short dataP
 {
 	pixelWriter = new Adafruit_NeoPixel(numLeds, dataPin, NEO_RGB + NEO_KHZ800);
 	pixelWriter->begin();
+	pixelWriter->setBrightness(255);
 }
 void addressableLED::setRGB(bool red, bool green, bool blue) const
 {

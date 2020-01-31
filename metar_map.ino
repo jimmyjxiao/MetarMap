@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <ESP8266WiFiMulti.h>
 #include "src/airportData/ExtractXML.h"
+#include "src/strandTest/strandTest.h"
 #include "src/PinWriter.h"
 #include "src/getStringFromUrl.h"
 ESP8266WiFiMulti WiFiMulti;
@@ -13,6 +14,7 @@ void setup()
   initializeHardware();
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP("DukeOpen");
+  rainbow(130);
 }
 void processUrl(const char* const url)
 {
